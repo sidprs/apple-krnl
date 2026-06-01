@@ -1,3 +1,12 @@
+
+extern "C" {
+    // symbols whose addresses are the values
+    extern char kernel_end[];
+    extern char heap_start[];
+    extern char heap_end[];
+}
+
+
 extern "C" void kernel_main() {
   // VGA text buffer at 0xB8000
   volatile char* vga = reinterpret_cast<volatile char*>(0xB8000);
