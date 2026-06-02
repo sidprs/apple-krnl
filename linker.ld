@@ -1,36 +1,15 @@
 ENTRY(_start)
-
+OUTPUT_FORMAT("elf32-i386") 
 SECTIONS
 {
-	. = 1M;
+    . = 1M;
 
-	.text BLOCK(4K) : ALIGN(4K)
-	{
-		*(.multiboot)
-		*(.text)
-	}
-
-	.rodata BLOCK(4K) : ALIGN(4K)
-	{
-		*(.rodata)
-		*(.rodata.*)
-	}
-
-	.data BLOCK(4K) : ALIGN(4K)
-	{
-		*(.data)
-	}
-
-	.bss BLOCK(4K) : ALIGN(4K)
-	{
-		*(COMMON)
-		*(.bss)
-	}
-  
-  .heap BLOCK(4K) : ALIGN(4K)
-    {
-        heap_start = .;
-        . += 1M;        /* 1MB static heap */
-        heap_end = .;
+    .multiboot : { 
+        KEEP(*(.multiboot)) 
     }
+    .text : { *(.text*) }
+	.rodata : { *(.rodata*) }
+    .data : { *(.data*) }
+    .bss : { *(.bss*) *(COMMON) }
+
 }
