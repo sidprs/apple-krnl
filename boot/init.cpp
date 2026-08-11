@@ -5,9 +5,6 @@
 #define VGA_HEIGHT 25
 #define VGA_MEMORY 0xB8000
 
-inline usize row = 0;
-inline usize col = 0;
-
 enum vga_color {
   VGA_COLOR_BLACK = 0,
   VGA_COLOR_BLUE = 1,
