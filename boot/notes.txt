@@ -1,0 +1,31 @@
+
+Extern "C" : its an instruction to the C++ compiler: "for this declaration, don't mangle
+
+compile gdt.cpp or assemble gts.s  -> .o file 
+gtd.cpp = call gtd_flush 
+gtd.s   = assembles obj 
+
+
+
+
+GTD & LDT 
+-----------
+
+
+0 - GTD
+1 - LTD
+
+- create a heap / kmalloc
+
+
+Segment Selector [ | ]
+
+- First Descriptor In the GDT is not used
+- All Entries in the tables are called Segment Descriptors
+- Paging does not exist before we create that  
+
+GDTR [ 32/64 bit linear addr  | 16 bit table limit ]  10 Bytes 
+
+
+upper 64 bits 
+lower 16 bits

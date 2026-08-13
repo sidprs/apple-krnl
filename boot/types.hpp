@@ -1,6 +1,7 @@
 #pragma once
 // Fixed-width types with zero headers. On i686-elf these sizes are
 // guaranteed: char=8, short=16, int=32, long long=64.
+const char* code = "error";
 using u8 = unsigned char;
 using u16 = unsigned short;
 using u32 = unsigned int;

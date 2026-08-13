@@ -1,5 +1,15 @@
 # Boot architecture
 
+Notes:
+
+Things to work on:
+
+1. MMIO 
+2. heap
+3. page tabling / GTD / ISR  
+4. scheduling (RD)
+
+
 How this kernel boots under QEMU, and why each module is split into
 `.hpp` + `.cpp` + `.s`.
 
