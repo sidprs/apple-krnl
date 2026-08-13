@@ -1,5 +1,5 @@
 #pragma once
-#include "arena.hpp"
+#include "mem.hpp"
 #include "terminal.hpp"
 #include "types.hpp"
 
