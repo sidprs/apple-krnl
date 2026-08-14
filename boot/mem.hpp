@@ -4,6 +4,8 @@
 #include "types.hpp"
 // memcpy notes
 
+extern u8 _kernel_end;
+
 extern "C" void* memcpy(void* dst, const void* src, usize len) {
   auto* d = (u8*)dst;
   auto* s = (const u8*)src;
